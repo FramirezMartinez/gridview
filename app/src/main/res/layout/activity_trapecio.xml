@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Trapecio">
+
+
+<TextView
+    android:id="@+id/texto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_alignParentTop="true"
+    android:textSize="22dp"
+    android:layout_marginTop="35dp"
+    android:text="Calcula el área y perímetro de un trapecio"
+    />
+    <EditText
+        android:id="@+id/base1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Base menor"
+        android:inputType="number"
+        android:textSize="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="100dp"
+        />
+    <EditText
+        android:id="@+id/base2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Base Mayor"
+        android:inputType="number"
+        android:textSize="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="200dp"
+        />
+    <EditText
+        android:id="@+id/lado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Lado"
+        android:textSize="25dp"
+        android:inputType="number"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="300dp"
+        />
+<Button
+    android:id="@+id/btnCalcular"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="80dp"
+    android:text="Calcular"
+    android:textSize="25dp"
+
+    android:layout_alignParentTop="true"
+    android:layout_marginTop="420dp"
+
+    />
+
+    <Button
+        android:id="@+id/btnlimpiar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Limpiar"
+        android:textSize="25dp"
+        android:layout_marginLeft="250dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="420dp"
+
+        />
+
+    <ImageView
+        android:id="@+id/trapecio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/trapecio"
+        android:layout_marginTop="500dp"
+        android:scrollbarSize="25dp"
+      android:layout_centerHorizontal="true"
+        />
+    <TextView
+        android:id="@+id/tvarea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+
+        android:textSize="25dp"
+        android:layout_marginTop="650dp"
+        android:layout_centerHorizontal="true"
+        />
+    <TextView
+        android:id="@+id/tvperimetro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+
+        android:textSize="25dp"
+        android:layout_marginTop="700dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <ImageView
+        android:id="@+id/regresar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_menu_revert" />
+
+</RelativeLayout>
