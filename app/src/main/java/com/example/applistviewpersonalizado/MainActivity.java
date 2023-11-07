@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -22,37 +23,55 @@ public class MainActivity extends AppCompatActivity {
 
     };
     private String areasFiguras[] = {
-            "Área = √s(s-a)(s-a)(s-b)",
-            "Área = √s(s-a)(s-b)(s-c)",
-            "Área=((Bmayor+Bmenor)*h)/2",
+            "Área ",
+            "Área ",
+            "Área ",
+            " "
+
+    };
+    private String areasFormulas[] = {
+            "√s(s-a)(s-a)(s-b)",
+            "√s(s-a)(s-b)(s-c)",
+            "((B1+B2)*h)/2",
             " "
 
     };
 
     private String perimetrosFiguras[] = {
-            "Perímetro = a + a + b",
+            "Perímetro",
 
-            "Perímetro = a + b + c",
+            "Perímetro",
 
-            "Perímetro=(Bmayor+Bmenor+2*lado)",
+            "Perímetro",
 
-            "Volumen  =πr²h"
+            "Volumen  "
 
 
     };
-    private ListView listView;
+    private String perimetrosFormulas[] = {
+             "a + a + b",
+
+             "a + b + c",
+
+             "B1+B2+2*L",
+
+             "πR²h"
+
+
+    };
+    private GridView gridView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(activity_main);
-        listView = findViewById(R.id.listviewPersonalizado);
+        gridView = findViewById(R.id.gridview);
 
         // instanceamos la clase para cargar las imagenes
-        BaseAdapterPersonalizada adapter = new BaseAdapterPersonalizada(this, listaImagenes, perimetrosFiguras, areasFiguras);
-        listView.setAdapter(adapter);
+        BaseAdapterPersonalizada adapter = new BaseAdapterPersonalizada(this, listaImagenes, perimetrosFiguras, perimetrosFormulas, areasFiguras, areasFormulas);
+        gridView.setAdapter(adapter);
         // Dentro evento comparamos cuando se detecte una posicion
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener()
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener()
                                         {
                                             @Override
                                             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

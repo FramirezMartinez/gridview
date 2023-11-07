@@ -15,13 +15,17 @@ public class BaseAdapterPersonalizada extends BaseAdapter {
     private Context context;
     private int listaImagenes[];
     private String listaPerimetros[];
+    private String perimetrosFormulas[];
     private String listaAreas[];
+    private String areasFormulas[];
 
-    public BaseAdapterPersonalizada(Context context, int listaImagenes[], String listaPerimetros[], String listaAreas[]) {
+    public BaseAdapterPersonalizada(Context context, int listaImagenes[], String listaPerimetros[],String perimetrosFormulas[] , String listaAreas[],String areasFormulas[]) {
         this.context = context;
         this.listaImagenes = listaImagenes;
         this.listaPerimetros = listaPerimetros;
         this.listaAreas = listaAreas;
+        this.areasFormulas=areasFormulas;
+        this.perimetrosFormulas=perimetrosFormulas;
     }
 
     @Override
@@ -51,7 +55,12 @@ public class BaseAdapterPersonalizada extends BaseAdapter {
         TextView textView1 = convertView.findViewById(R.id.perimetros);
         TextView textView2 = convertView.findViewById(R.id.areas);
 
+        TextView textView3 = convertView.findViewById(R.id.areasF);
+        TextView textView4 = convertView.findViewById(R.id.perimetrosF);
+
         imageView.setImageResource(listaImagenes[position]);
+        textView3.setText(perimetrosFormulas[position]); // Muestra la fórmula de perímetro
+        textView4.setText(areasFormulas[position]);
 
         // Texto del perímetro con estilo de negrita para las primeras 8 letras
         String periText = listaPerimetros[position];
